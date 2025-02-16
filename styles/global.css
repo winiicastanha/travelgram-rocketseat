@@ -18,10 +18,15 @@
   --text-sm: 12px/170% var(--font-family);
   --text: 16px/150% var(--font-family);
 }
+html{
+  overflow-x: hidden;
+}
+
 body{
   color: var(--text-color-secondary);
   background-color: var(--background-color);
   font-family: var(--font-family);  
+  overflow-x: hidden;
 }
 a{
   text-decoration: none;
@@ -39,4 +44,15 @@ a:hover{
 }
 .bg-surface-color{
   background-color: var(--surface-color);
+}
+.desktop-only{
+  display: none;
+}
+
+@media (width >= 80em) {
+  .desktop-only{
+    display: initial;
+  }
+
+
 }
